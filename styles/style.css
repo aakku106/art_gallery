@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  transition: all 1s ease;
+}
+
+@keyframes animationN {
+  0% {
+    transform: translateY(-100%);
+  }
+  45% {
+    transform: scale3d(2.5, 2.5, 2.5);
+  }
+  55% {
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+  70% {
+    transform: scale3d(3.5, 3.5, 3.5);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@media (max-width: 900px) {
+  section span {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 600px) {
+  section span {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  overflow-x: hidden;
+}
+body section {
+  position: absolute;
+  top: 3vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+body section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, black, red, black, yellow, black, green, black, blue, black, purple, red, black, yellow, black, green, black, blue, black, purple, black);
+  animation: animationN 5s linear 0s infinite;
+  z-index: 1;
+}
+body section .left:hover {
+  transform: scale(5) translateY(50%) translateX(50%);
+  z-index: 1200 !important;
+  height: auto;
+  width: 100%;
+}
+body section .zoro:hover {
+  transform: scale(5) translateY(50%) translateX(90%) rotate(-90deg);
+  z-index: 1200 !important;
+  height: auto;
+  width: 100%;
+}
+body section .right:hover {
+  transform: scale(5) translateY(50%) translateX(-50%);
+  z-index: 1200 !important;
+  height: auto;
+  width: 100%;
+}
+body section .aarbaj:hover {
+  transform: scale(5) translateY(50%) rotate(-90deg);
+  z-index: 1200 !important;
+  height: auto;
+  width: 100%;
+}
+body section span {
+  position: relative;
+  display: block;
+  width: 7vw;
+  height: 7vw;
+  background: #181818;
+  z-index: 1;
+  transition: all 1s;
+}
+body section span:hover {
+  background: rgba(252, 1, 139, 0.5333333333);
+  z-index: 3000;
+}
+body section span img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1200 !important;
+  transition: 1s all;
+}
+body section span img:hover {
+  transform: scale(5) translateY(50%);
+  z-index: 1200 !important;
+  height: auto;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
