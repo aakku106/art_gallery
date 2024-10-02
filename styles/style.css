@@ -111,7 +111,7 @@ body section span img {
 }
 body section span img:hover {
   transform: scale(5) translateY(50%);
-  z-index: 1200 !important;
+  z-index: 3100 !important;
   height: auto;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
